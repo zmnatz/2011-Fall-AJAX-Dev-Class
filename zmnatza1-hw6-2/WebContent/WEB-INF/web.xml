@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" 
+	xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+  
+  <!--  Run JsonRpcInitializer when app starts up. -->
+  <listener>
+    <listener-class>
+      JsonRpcInitializer
+    </listener-class>
+  </listener>
+  
+  <!-- Map the JSON RPC Handler to the URL 
+       http://hostname/appname/JSON-RPC
+       Note that you can also turn on gzip compression
+       of the response. See the documentation at jabsorb.org. 
+       This is useful for performance reasons in real life, but
+       disabling it for learning is better so that you can use
+       Firebug to trace the data that goes back and forth. -->
+  <servlet>
+    <servlet-name>org.jabsorb.JSONRPCServlet</servlet-name>
+    <servlet-class>org.jabsorb.JSONRPCServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>org.jabsorb.JSONRPCServlet</servlet-name>
+    <url-pattern>/JSON-RPC</url-pattern>
+  </servlet-mapping>
+  
+  <!-- If URL gives a directory but no filename, try index.jsp
+       first and index.html second. If neither is found,
+       the result is server-specific (e.g., a directory 
+       listing or a 404 error).  
+  -->
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+</web-app>

@@ -1,0 +1,21 @@
+<!DOCTYPE html "http://www.w3.org/TR/xhtml1/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>HW 2: Problem 1</title>
+</head>
+<script src="ajaxHelpers.js" type="text/Javascript"></script>
+<script type="text/Javascript">
+function loadRichest()
+{
+	var request = getRequestObject();
+	request.onreadystatechange = function() {
+		ajaxAlert(request)
+	};
+	request.open("GET","getRichest",true);
+	request.send(null);
+}
+</script>
+<body>
+	<input type="button" value="Richest Account" onClick="loadRichest();"></input>
+</body>
+</html>

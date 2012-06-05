@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  	<title>HW9 Scriptaculous</title>
+  	<link rel="stylesheet" type="text/css" href="./css/style.css"></link>
+  	<script src="./scripts/prototype.js" type="text/javascript"></script>
+	<script src="./scripts/scriptaculous/scriptaculous.js?load=effects,controls" 
+			type="text/javascript"></script>
+	<script src="./scripts/ajaxHelpers.js" type="text/javascript"></script>
+	<script src="./scripts/ajaxOutput.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="problems">
+		<form action="#" onsubmit="googleSearch('cityField1'); return false;">
+			<h2>#1: Scriptaculous Autocomplete</h2>
+			<input type="submit" value="Search"/>
+			<label>Select a City</label>
+			<input type="text" name="city" id="cityField1"/>
+			<div id="cityMenu1" class="autocomplete"></div>
+		</form>
+		<form action="#" onsubmit="googleSearch('cityField2'); return false;">
+			<h2>#2: Autocomplete On-Server</h2>
+			<input type="submit" value="Search"/>
+			<label>Select a City</label>
+			<input type="text" name="cityPrefix" id="cityField2"/>
+			<div id="cityMenu2" class="autocomplete"></div>
+		</form>
+		<form action="#" onsubmit="return usersSubmit('userId',solution);">
+			<h2>#3, #4: Autocomplete Customer</h2>
+			<input type="submit" value="Load User"/>
+			<label>Customer ID:</label>
+			<input type="text" name="userId" id="userId"/>
+			<div id="userMenu" class="autocomplete"></div>
+		</form>
+	</div>
+	<div id="solution"/>
+</body></html>

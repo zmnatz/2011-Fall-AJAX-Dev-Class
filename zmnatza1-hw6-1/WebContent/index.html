@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  	<title>HW6 Problems 1-2</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css"></link>
+	<script src="./scripts/formSubmitters.js" type="text/Javascript"></script>
+	<script src="./scripts/ajaxHelpers.js" type="text/Javascript"></script>
+	<script src="./scripts/ajaxOutput.js" type="text/Javascript"></script>
+</head>
+<body>
+<div class="problems">
+	<form action="#" onsubmit="return userSubmit(this, 'solution')">
+		<h2>Problem 1: Single Submission</h2>
+		<input type="submit"></input>
+	  	<label>Customer ID:</label>
+	  	<input type="text" name="userId"/><br/>
+	</form>
+	<form action="#" onsubmit="return usersSubmit(this, 'solution')">
+		<h2>Problem 2: Multiple Accounts</h2>
+		<input type="submit"></input>
+	  	<p>Enter customer IDs below (Comma Delimited):</p>
+	  	<textarea name="userIds"></textarea>
+	</form>
+	<p>For reference, users a1234 and a1236 have negative balances.</p>
+	<p>Users a1235 and a1237 have positive balances.</p>
+</div>
+<div id="solution"></div>
+</body></html>

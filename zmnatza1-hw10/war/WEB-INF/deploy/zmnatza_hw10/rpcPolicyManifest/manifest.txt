@@ -1,0 +1,2 @@
+# Module zmnatza_hw10
+# RPC service class, partial path of RPC policy file

@@ -1,0 +1,35 @@
+<!DOCTYPE html "http://www.w3.org/TR/xhtml1/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>HW 2: Problem 3</title>
+</head>
+<script src="ajaxHelpers.js" type="text/Javascript"></script>
+<script type="text/Javascript">
+var request = getRequestObject();
+function alertRichest()
+{
+	request.onreadystatechange = function() {
+		ajaxAlert(request)
+	};
+	request.open("GET","getRichest?delay=5000",true);
+	request.send(null);
+}
+
+function loadRichest()
+{
+	request.onreadystatechange = function() {
+		ajaxWriteItems(request,document.getElementById('accountInfo'))
+	};
+	request.open("GET","getRichest",true);
+	request.send(null);
+}
+</script>
+<body>
+	<h1>Step 1: Click This (Trigger Alert)</h1>
+	<input type="button" value="Richest Account" onClick="alertRichest();"></input>
+	<h1>Step 2: Click This Within 5 Seconds(Trigger Div Write)</h1>
+	<input type="button" value="Richest Account" onClick="loadRichest();"></input>
+	<div id="accountInfo"></div>
+	<p>The alert never pops up because the request has been overridden to output results to the div instead of an alert.</p>
+</body>
+</html>

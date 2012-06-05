@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  	<title>HW8 Prototype</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css"></link>
+	<script src="./scripts/prototype.js" type="text/Javascript"></script>
+	<script src="./scripts/ajaxHelpers.js" type="text/Javascript"></script>
+	<script src="./scripts/ajaxOutput.js" type="text/Javascript"></script>
+	<script src="./scripts/AjaxRequest.js" type="text/Javascript"></script>
+	<script src="./scripts/Alertable.js" type="text/Javascript"></script>
+	<script src="./scripts/Person.js" type="text/Javascript"></script>
+	<script src="./scripts/Employee.js" type="text/Javascript"></script>
+	<script src="./scripts/Contractor.js" type="text/Javascript"></script>
+	<script src="./scripts/personExample.js" type="text/Javascript"></script>
+</head>
+<body>
+<div class="problems">
+	<form action="#" onsubmit="return usersSubmit(this, 'solution')">
+		<h2>Problem 1</h2>
+		<input type="submit" value="Standard Submit"></input>
+	  	<p>Enter customer IDs below:<br/>
+	  	(Comma Delimited)</p>
+	  	<textarea name="userIds"></textarea>
+	</form>
+	<form action="#" onsubmit="return usersSubmitCustomRequester(this, 'solution')">
+		<h2>Problem 2</h2>
+		<input type="submit" value="Proto-esque Submit"></input>
+	  	<p>Enter customer IDs below:<br/>
+	  	(Comma Delimited)</p>
+	  	<textarea name="userIds"></textarea>
+	</form>
+	<form action="#" onsubmit="return false">
+		<h2>Problem 3</h2>
+		<table>
+			<tr>
+				<th></th>
+				<th>Person</th>
+				<th>Employee</th>
+				<th>Contractor</th>
+			</tr>
+			<tr>
+				<td>Show Info</td>
+				<td><input type="button" onclick="showPerson(0,'solution')" value="Show Person"></input></td>
+				<td><input type="button" onclick="showPerson(1,'solution')" value="Show Person"></input></td>
+          		<td><input type="button" onclick="showPerson(2,'solution')" value="Show Person"></input></td>
+          	</tr>
+			<tr>
+				<td>Alert Info</td>
+				<td><input type="button" onclick="alertPerson(0)" value="Alert Person"></input></td>
+				<td><input type="button" onclick="alertPerson(1)" value="Alert Person"></input></td>
+				<td><input type="button" onclick="alertPerson(2)" value="Alert Person"></input></td>
+			</tr>
+		</table>
+	</form>
+	<p>For reference:<br/>
+		Users a1234 and a1236 have negative balances.<br/>
+		Users a1235 and a1237 have positive balances.
+	</p>
+</div>
+<div id="solution"></div>
+</body></html>

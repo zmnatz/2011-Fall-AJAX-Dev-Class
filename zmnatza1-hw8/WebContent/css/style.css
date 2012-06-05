@@ -1,0 +1,31 @@
+div.problems {
+	float: left;
+	width: 350px;
+	margin-right: 10px;
+}
+
+form {
+	margin: 5px;
+	padding: 5px; 
+	width: 100%;
+	border: 1px solid black;
+}
+
+form input[type="submit"]{
+	float: right;
+}
+
+#solution {
+	float: left;
+	width: 350px;
+	padding: 10px;
+	margin: 10px;
+}
+
+.positive {
+	color: blue;
+}
+
+.negative {
+	color: red;
+}

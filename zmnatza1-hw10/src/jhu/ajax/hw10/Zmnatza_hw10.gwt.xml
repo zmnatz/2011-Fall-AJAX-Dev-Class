@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='zmnatza_hw10'>
+  <inherits name='com.google.gwt.user.User'/>
+  <inherits name='com.google.gwt.user.theme.clean.Clean'/>
+  <entry-point class='jhu.ajax.hw10.client.HomeScreen'/>
+  <source path='client'/>
+</module>

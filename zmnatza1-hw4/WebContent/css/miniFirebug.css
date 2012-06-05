@@ -1,0 +1,63 @@
+div.miniFirebug {
+	position: fixed !important;
+	bottom: 0px;
+	left: 0px;
+	height: 200px;
+	width: 100%;
+	border-top: 1px solid black;
+	background-color: #DDDDDD;
+}
+
+div.miniFirebugFiller {
+	height: 200px;
+}
+
+div.miniFirebug div.output {
+	position: relative;
+	top:0px;
+	left: 0px;
+	width: 100%;
+	height: 170px;
+	overflow-y: auto;
+}
+
+div.miniFirebug div.output div.in {
+	color: blue;	
+}
+div.miniFirebug div.output div.out {
+	color: green;
+}
+div.miniFirebug div.output div.error {
+	color: red;
+}
+div.miniFirebug div.output div.log{
+	color: olive;
+}
+
+div.miniFirebug form.console {
+	position: relative;
+	botton: 0px;
+	left: 0px;
+	width: 100%;
+	height: 30px;
+}
+
+div.miniFirebug form.console input[type="text"]{
+	width: 68%;
+	
+}
+div.miniFirebug form.console input[type="submit"] {
+	width: 10%;
+	float: right;
+}
+
+.firebugShowButton {
+	position: fixed !important; 
+	bottom: 0; 
+	right: 0;
+}
+
+div.miniFirebug form.console input[type="button"] {
+	width: 10%;
+	float: right;
+}
